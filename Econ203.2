@@ -1,0 +1,243 @@
+\documentclass[12pt]{article}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdwlist}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{defi}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+%---------------------------
+\newcommand{\set}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\st}{\ |\ }
+\newcommand{\Hskip}{\vspace{0.7in}}
+\newcommand{\vx}{\bf x}
+\newcommand{\vy}{\bf y}
+
+\newcommand{\V}{\vspace{0.3cm}\\}
+\newcommand{\pro}{\V \textbf{Proof:} \V}
+%------BEGIN DOC--------
+
+\begin{document}
+
+\begin{flushright}
+Joe Day\\
+Jameson King\\
+Brian Sunberg\\
+Econ 203\\
+10/13/16
+\end{flushright}
+\begin{center}
+\underline{PROBLEM SET 2 : Economic Analysis IV}
+\end{center}
+
+\begin{exercise} \textbf{Taxation of Labor Income}
+\begin{enumerate}
+    \item [1.] The household has income equal to $wL - T$ and one source of consumption $C$. So, the aggregated budget constraint is $wL-T = C$. \V
+    The household wants to maximize utility w.r.t. aggregate budget constraint. So we have: 
+    $$\max_{C,L} U(C,L) w.r.t. BC = \max_{C,L} \Big( 2\sqrt{C} - L + \lambda(wL-T-C) \Big) $$ This leads to the following first order conditions: \V
+    $\Big[ \frac{\partial}{\partial C} \Big] : 0 = \frac{1}{\sqrt{C}} - \lambda \implies \frac{1}{\sqrt{C}} = \lambda $ \V
+    $\Big[ \frac{\partial}{\partial L} \Big] : 0 = -1 + w\lambda \implies w\lambda = 1 $ \V
+    $\Big[ \frac{\partial}{\partial \lambda} \Big] : 0 = wL-T-C \implies wL - T = C$ \qed
+    \item [2.] From the FOC's, we can derive that $w = \sqrt{C^*}$ which implies $C^* = w^2$. \V
+    Plugging this into the budget constraint yields that $L^* = w + \frac{T}{w}$. \V
+    Therefore, an increase in $T$ leads to an increase in $L^*$. \qed
+    \item [3.] The tax is not distortionary $\textit{in one period}$. There is no crowding out effect on $C^*$ due to a change in $T$ as $C^*$ does not depend on $T$. Instead, the household increases their $L^*$ to increase their income to offset the tax and maintain consumption $C$. Assuming production varies with labor, output, however, is distorted.\V
+    It is worth noting that over multiple periods, the price of labor would go down, assuming the same production function across periods (we are not provided with it). This would lead to a decrease in income and thus changes in consumption. \qed
+    \item [4.] This tax system does not exhibit a Laffer Curve. We know this because: 
+    $$\frac{\partial L}{\partial T} = \frac{1}{w} >0  \text{, since } w>0$$
+    Note that $\displaystyle \frac{\partial L}{\partial T}$ does not change value, or sign, for different values of $T$. \qed \newpage
+    \item [5.] Redo parts 1-4 using proportional tax $\tau$ instead. \V
+    Budget constraint: $C = wL - \tau wL = (1-\tau)wL$ \V
+    Optimization problem: $\displaystyle\max_{C,L} \bigg(2\sqrt{C} - L + \lambda \big((1-\tau)wL - C \big) \bigg)$ \V
+    FOC's:  $\Big[ \frac{\partial}{\partial C} \Big] : 0 = \frac{1}{\sqrt{C}} - \lambda \implies \frac{1}{\sqrt{C}} = \lambda $ \V
+    $\Big[ \frac{\partial}{\partial L} \Big] : 0 = -1 + w\lambda - \lambda \tau w \implies \lambda(w-\tau w) = 1 $ \V
+    $\Big[ \frac{\partial}{\partial \lambda} \Big] : 0 = wL-T-C \implies wL - \tau wL = C$ \V
+    These FOC's yield: $C^* = w^2(1-\tau)^2$ \\
+    Which can be plugged into the budget constraint to yield: $L^* = w(1-\tau)$ \V
+    In this case, the tax is distortionary. We know this because, from our expressions for $C^*, L^*$, we can see that $C^*$ changes, specifically it goes down, with change in $\tau$. So increasing the tax rate will crowd out consumption. Assuming production depends on labor, output is crowded out. \V
+    This tax system still does not exhibit a Laffer curve. Examining $\frac{\partial L}{\partial T}$ we can see that $L^*$ does vary with changes in $\tau$, but that this change is constant, at a rate of $-w$. Hence, this rate of change never changes value, or sign, as a result of changes in $\tau$. \V
+    There are additional distortions in this case. $C^*$ is affected in the first period, unlike with lump sum tax. The distortion of labor has increased, assumning $w>1 $. \qed
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} \textbf{De Macroeconomie Germanorum}
+\begin{enumerate}
+    \item [1.] First we set up the dumb household's problem. This household has intertemporal utility $\sum_{t=0} \beta^t u(c_t)$ the following budget constraint: $$c_t + m_t \leq (1-\tau)Am_{t-1}^\alpha + T_t, \forall t$$
+    where $T_t$ is the government transfer and equals $\tau Am_{t-1}^\alpha$ \V
+    So they have the following maximization problem: $$\max_{c_t, m_t} \sum_{t=0}^\infty \beta^t u(c_t) \text{ such that } c_t + m_t \leq (1-\tau)Am_{t-1}^\alpha + T_t$$
+    This means that an increase in $T_t$ changes behavior of the household. \V
+    Now consider the smart household. This household has the same intertemporal utility and budget constraint, but they recognize the value of the government transfer and substitute in the expression that $T_t = \tau Am_{t-1}^\alpha$. This results in the following maximization problem: $$\max_{c_t, m_t} \sum_{t=0}^\infty \beta^t u(c_t) \text{ such that } c_t + m_t \leq (1-\tau)Am_{t-1}^\alpha + \tau Am_{t-1}^\alpha = Am_{t-1}^\alpha$$
+    Which implies that, for this smart household, changes in $T_t$ don't affect the maximization problem. So, behavioral decisions are not inhibited by $T_t$, as smart households recognize that the government fully transfers back to the household. This is in line with the Ricardian equivalence proposition. \qed
+    \item [2.] It makes sense to use the dumb household as the basis of a model that has many households because government transfers are distributed evenly among participatory households. However, it does not collect government revenue evenly; it collects as a proportion of saved mushroom. As a result, households face a potential prisoner's dilemma. Even though all houses could benefit from coordinating and ignoring the government transfer during optimization, it would be to an individual household's benefit to break from the plan, resulting in low taxes and a high transfer returned. Game theory tells us that because of this, all houses will take the protective route of acting as "dumb" households. \qed 
+    \item [3.]  Since this tribe is taxed at a rate proportional to their consumption the new maximization problem looks like this: $$\max_{c_t,m_t} \sum_{t=0}^\infty \beta^t u(c_t) \text{ such that } (1+\tau_c)c_t + m_t \leq Am_{t-1}^\alpha + T_t$$
+    We assume utility function is non-decreasing, and so equality in budget constraint holds. Then we set up the Lagrangian: $$\mathscr{L}(c, m) = \beta^t u(c_t) + \lambda\big((1+\tau_c)c_t + m_t - Am_{t-1}^\alpha - T_t \big) $$
+    Which yields the following first order conditions: \V
+    $\bigg[ \frac{\partial}{\partial c} \bigg] : \beta^t u'(c_t) = \lambda_t(1+\tau_c)$ \V
+    $\bigg[ \frac{\partial}{\partial l} \bigg] : \beta\lambda_t = \lambda_{t+1}(A\alpha m_{t}^{\alpha-1})$ \V
+    Note that in the steady state $\lambda_t = \lambda_{t+1}$. \V
+    This leads to the simplified euler condition: $m^* = \displaystyle \big(\frac{A\alpha}{\beta}\big)^{\frac{1}{1-\alpha}}$ \V
+    From this, we can know that the steady state implies saving $m$ has constant optimum. This limits flexibility of $c$. So, the taxation does not affect saving or consumption. \qed 
+    \item [4.] Since this tribe is taxed according to the size of mushroom at the beginning of the period, the maximization problem looks like this: $$\max_{c_t,m_t} \sum_{t=0}^\infty \beta^t u(c_t) \text{ such that } c_t + m_t \leq (1-\tau)Am_{t-1}^\alpha + T_t$$
+    Which yields the FOC's: \V
+    $\bigg[ \frac{\partial}{\partial c} \bigg] : \beta^t u'(c_t) = \lambda_t$ \V
+    $\bigg[ \frac{\partial}{\partial l} \bigg] : \lambda_t = \lambda_{t+1}(1-\tau)(A\alpha m_{t}^{\alpha-1})$ \V
+    In the steady state, $\lambda_t = \lambda_{t+1}$. \V
+    From this we can derive and simplify the euler equation: \\
+    $m^* = \big(\beta(1-\tau)A\alpha \big)^\frac{1}{1-\alpha}$ \V
+    We know that government revenue $= \tau A(m_{t-1})^\alpha = \tau A \big(\beta(1-\tau)A\alpha \big)^\frac{\alpha}{1-\alpha}$ \V
+    This represents a transformation of the function $m(\tau) = -\tau^2$. So, the graph of $m(\tau)$ is that of a Laffer curve. 
+    \vspace{4cm} \\
+    
+    To find revenue maximizing $\tau$ we solve $\max_{\tau} \tau Am^\alpha$ which yields $\tau^* = Am^\alpha$ \qed
+        
+    \item [5.] Upon examination, the period utility functions do not affect consumption in the steady state of either case. One major assumption we made about our utility function is that the function is nice, i.e. it is increasing and concave. If our utility function were very convex, we might run into problems with our model working this way. Suppose, for example that $u(x) = x^2$. Then $u'(x) = 2x$ which increases as $x$ increases. If this overcomes the discount of $\beta^t$ then the optimal behavior changes. We would expect that a consumre would save all of the mushroom until the final period, presumably the end of his life, and consume the entirety of the then giant mushroom. This would yield the greatest utility, for a sufficiently convex utility function. \qed  
+    
+\end{enumerate}
+\end{exercise} 
+\newpage
+\begin{exercise} \textbf{Income Inequality}
+\begin{enumerate}
+    \item [1.] With the rise of technology comes a reduction in the number of well paid blue collar jobs.  Those who own and run the machines increase their wealth while those who originally had the blue collar jobs are unemployeed or employeed at a lower wage.  The decrease in blue collar jobs also means that a higher number of jobs require skilled labor, and when a higher number requires skilled labor, those without the required education are unable to compete or positions.  Another common concern is that the wealthy are able to lobby against wealth distribution, thus furthering the issue.  Essentially those who own the technology and those who own shares in companies continue to increase their wealth, while those who do not continue to lack it.  Globalization, on the other hand, allows a more advanced nation to utilize the work force of a less advanced nation.  By doing so, it may be the case that both can benefit, but the more advanced nation may increase the inequality within its own nation by limiting the number of jobs available.  Overall, it can also be argued that globalization gives rising nations more opportunities and reduces overall inequality.  Technology and globalization can both be considered to be forces that help everyone in the long run, but potentially help some groups more than others.  While they increase the gap between the wealthy and the poor, it may be the case that both see an increase in their own standard of living.
+    \item [2.] Consider the following economies.\\ Each economy has 100 total units of currency in circulation and 10 households.\\ Furthermore, we will allow $U(Y) = Y^2$.\\
+    Economy $A$ has the following distribution of incomes: $Y_A = \{5,5,5,5,5,5,5,5,5,55 \}$ \\
+    Economy $B$ has the following distribution of incomes: $Y_B = \{10,10,10,10,10,10,10,10,10,10\}$.\V    Under the Utilitarian or Benthamite social welfare function, social welfare $W = \displaystyle \sum_{i=1}^{10} U(Y_i)$, where $Y_i$ denotes a member of set $Y_A$ or $Y_B$.\\
+    Then $W_A = \displaystyle \sum_{i=1}^{10} U(Y_{A_i}) = 9(5)^2+55^2 = 3250$. \\
+    And $W_B = \displaystyle \sum_{i=1}^{10} U(Y_{B_i}) = 10(10)^2= 1000$.\\
+    Under the Utilitarian social welfare function, $W_A > W_B$. \V
+    Under the Max-Min or Rawlsian social welfare function, social welfare $W = \min(U(Y))$. \\
+    Then $W_A = \min(U(Y_A)) = \min(\{25,25,25,25,25,25,25,25,25,3025\}) = 25$. \\
+    And $W_B = \min(U(Y_B)) = \min(\{100,100,100,100,100,100,100,100,100,100\}) = 100$. \\
+    Under the Rawlsian social welfare funtion, $W_B > W_A$. \qed
+    \item [3.] Either social welfare function could lead to some odd policies if taken to the extreme.\\ If one subscribes to the Utilitarian social welfare function, and the utility function looked something like this: $U(Y) = Y^\alpha$ for $\alpha > 1$, then maximizing social welfare would entail advocating that all the money in the economy be given to one person. \\
+    If one subscribes to the Rawlsian social welfare function, then policies similar to the one used as an example in part 2 of this exercise. Even if it is not efficient (especially if the utility function is $U(Y) = Y^\alpha$ for $\alpha >1$ !), the way to maximize social welfare would be to redistribute all wealth exactly evenly. \qed
+    \item [4.] One way to rectify these seemingly conflicting conclusions could be to examine the sample populations in each. The micro-data focuses on people aged 20-50 with good jobs. The macro-data refers to aggregate income, or the income of all members of the labor force in an economy, regardless of age or quality of employment. So, it is possible that the micro-data is correct, and that people within this age group have different utility functions that those either two young or too old to fit into this group. It is also possible that people with good jobs earn higher wages, which could, depending on utility function, mean that a tax increase would affect their decision making less than someone with a lower wage from a "bad job". The macro-data could also be correct, in that the distortions experienced by people age $<$20 or $>$50 or by people without good jobs outweigh the people aged 20-50 with good jobs. This would result in aggregate income decrease, without changing the labor supply of people age 20-50 with good jobs. \qed
+\end{enumerate}
+\end{exercise}
+
+
+\end{document}
