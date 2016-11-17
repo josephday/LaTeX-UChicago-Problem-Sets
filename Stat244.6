@@ -1,0 +1,436 @@
+\documentclass[11pt]{article}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdwlist}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{defi}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+%---------------------------
+\newcommand{\set}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\st}{\ |\ }
+\newcommand{\Hskip}{\vspace{0.7in}}
+\newcommand{\vx}{\bf x}
+\newcommand{\vy}{\bf y}
+
+\newcommand{\V}{\vspace{0.3cm}\\}
+\newcommand{\pro}{\V \textbf{Proof:} \V}
+\newcommand{\sol}{\V \textbf{Solution:} \V}
+\usepackage{array}
+%------BEGIN DOC--------
+
+\begin{document}
+
+\begin{flushright}
+Joe Day\\
+Stat 244\\
+11/17/16
+\end{flushright}
+\begin{center}
+\underline{PROBLEM SET 6 : STAT THEORY AND METHODS}
+\end{center}
+
+\begin{exercise} Rice 8.52\\
+Let $X_1,...,X_n$ be i.i.d. random variables with density function
+$$f(x \st \theta) = (\theta + 1)x^\theta, \hspace{1cm} 0 \leq x \leq 1 $$
+\begin{enumerate}
+\item[b.] Find the mle of $\theta$. \sol
+Operating with the likelihood as the density function, we can find that the log likelihood $l(\theta)$ is:\V
+$l(\theta) = \sum_{i=1}^n \big[\log(\theta+1) + \theta \log(x_i) \big]$ \V
+Taking the partial derivative and setting equal to 0: \V
+$\displaystyle \frac{\partial l}{\partial \theta} = \frac{n}{(\theta+1)} + \sum_{i=1}^n \log(x_i) = 0$ \V
+$\implies \displaystyle \theta = \frac{-n}{\sum_{i=1}^n \log(x_i)} - 1$ \V
+Therefore, we have  this value of theta as our mle, $\hat{\theta} = \displaystyle \frac{-n}{\sum_{i=1}^n \log(x_i)} - 1$. \qed \newpage
+\item[c.] Find the asymptotic variance of the mle. \sol
+Var$(\hat{\theta})$ is asymptotically equivalent to $\frac{1}{nI(\theta)}$. \V
+So we have to calculate $I(\theta) = -E \bigg[\frac{\partial^2}{\partial \theta^2} \log f(X \st \theta) \bigg]$ \V
+$I(\theta) = -E \bigg[\frac{\partial^2}{\partial \theta^2} \big(\log (\theta+1) + \theta \log X \big)  \bigg]$ \V
+ $I(\theta) = -E \bigg[\frac{\partial}{\partial \theta} \big(\frac{1}{(\theta+1)} + \log X \big)  \bigg]$ \V
+  $I(\theta) = -E \bigg[ -\big(\frac{1}{(\theta+1)^2}\big)  \bigg]$ \V
+ Since $E \bigg[ -\big(\frac{1}{(\theta+1)^2}\big)  \bigg] = -\big(\frac{1}{(\theta+1)^2}\big) \int f(x \st \theta) = -\big(\frac{1}{(\theta+1)^2}\big) (1)$: \V
+  $I(\theta) = \big(\frac{1}{(\theta+1)^2}\big)$ \V
+  Therefore, we know that Var$(\hat{\theta})$ is asymptotically equivalent to: \V
+  Var$(\hat{\theta}) \approx \displaystyle \frac{1}{nI(\theta)} = \frac{1}{n \big(\frac{1}{(\theta+1)^2}\big)} = \displaystyle \frac{(\theta+1)^2}{n} $ \qed 
+  
+\item[d.] Find a sufficient statistic for $\theta$. \sol
+We use Corollary A, which states that "If $T$ is sufficient for $\theta$, the maximum likelihood estimate is a function of $T$." \V
+We know from part b the maximum likelihood estimate is $\hat{\theta} = \displaystyle \frac{-n}{\sum_{i=1}^n \log(x_i)} - 1$ \V
+By Corollary A, we also know that if $T$ is sufficient (which this question presupposes), then $\hat{\theta} = f(T)$, for some transformation $f$. \V
+By definition of sufficient statistic, then, we are looking for $T(x_1, x_2,...,x_n)$ such that $\hat{\theta} = f(T(x_1,x_2,...,x_n))$. \V
+The statistic $T(x_1, ...,x_n) = \sum_{i=1}^n \log(x_i)$ satisfies these requirements. \qed \newpage
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} Rice 8.60\\
+Let $X_1,...,X_n$ be an i.i.d. sample from an exponential distribution with the density function:
+$$f(X\st\tau) = \frac{1}{\tau}e^{\frac{-X}{\tau}}, \hspace{1cm} 0\leq x < \infty$$
+\begin{enumerate}
+\item[a.] Find the mle of $\tau$. \sol
+Regard our density function as a function of $\tau$ to get our likelihood function. We can see then that the likelihood function is:\V
+$\displaystyle L(\tau; \textbf{X}) = \Pi_{j=1}^n f_X(x_j, \tau)$ \V
+Since each $X_i$ is independent:\\
+$\displaystyle L(\tau; \textbf{X}) = \frac{1}{\tau^n} \exp\bigg(-\frac{1}{\tau}\sum_{j=1}^n X_i\bigg)$ \V
+ Then, the log likelihood function is: \V
+$l(\tau; \textbf{X}) = \ln\bigg(\frac{1}{\tau^n} \exp\Big(-\frac{1}{\tau}\sum_{j=1}^n X_i\Big)\bigg) = n\ln(\frac{1}{\tau}) - \frac{1}{\tau}\sum_{j=1}^n x_j$ \V
+We then take: \\
+$\displaystyle \frac{\partial l}{\partial \tau} = \frac{-n}{\tau} + \frac{1}{\tau^2} \sum_{j=1}^n x_j$\V
+Setting this equal to zero and solving for $\tau$ yields:\V
+$\displaystyle \hat{\tau} = \frac{\sum_{j=1}^n x_j}{n}$ \qed
+
+\item[b.] What is the exact sampling distribution of the mle? \sol
+In Chapter 4, we learned that $\sum_{i=1}^n X_i = X_1 + ... + X_n \sim \Gamma(n, \frac{1}{\tau})$ for this type of distribution. However, I got the sense from an email hint that we should prove this fact ourselves. So here goes!\V
+To prove the above, we will need the fact that for $X \sim \Gamma(\alpha_1, \beta), Y \sim \Gamma(\alpha_2, \beta)$, we have $X+Y \sim \Gamma(\alpha_1 + \alpha_2, \beta)$. \V
+Let $Z = X+Y$. Then we have: \V
+$ \displaystyle f_Z(z) = \int_0^\infty \frac{\beta^{\alpha_1}}{\Gamma(\alpha_1)} x^{\alpha_1 -1} e^{-\beta x} \frac{\beta^{\alpha_2}}{\Gamma(\alpha_2)} x^{\alpha_2 -1} e^{-\beta x} dx $ \V
+$ \displaystyle f_Z(z) = \frac{\beta^{\alpha_1 + \alpha_2} e^{-\beta z}}{\Gamma(\alpha_1) \Gamma(\alpha_2)} \int_0^z x^{\alpha_1 -1}(z-x)^{\alpha_2-1} dx$ \V
+$ \displaystyle f_Z(z) = \frac{\beta^{\alpha_1 + \alpha_2} e^{-\beta z}}{\Gamma(\alpha_1) \Gamma(\alpha_2)} z^{\alpha_1 + \alpha_2 - 1} \int_0^1 \bigg(\frac{x}{z}\bigg)^{\alpha_1 -1}\bigg(1-\frac{x}{z}\bigg)^{\alpha_2-1} d(x/z)$ \V
+Using the density of the Beta Distribution:\\
+$ \displaystyle f_Z(z) = B(\alpha_1, \alpha_2) \frac{\beta^{\alpha_1 + \alpha_2} e^{-\beta z}}{\Gamma(\alpha_1) \Gamma(\alpha_2)} z^{\alpha_1 + \alpha_2 - 1} \int_0^1 \frac{\big(w\big)^{\alpha_1 -1}\big(1-w\big)^{\alpha_2-1}}{B(\alpha_1, \alpha_2)} dw$ \V
+$ \displaystyle f_Z(z) = \frac{\beta^{\alpha_1 + \alpha_2} e^{-\beta z}}{\Gamma(\alpha_1 + \alpha_2)} z^{\alpha_1 + \alpha_2 - 1}$ \V
+Which shows Lemma 1, that $Z = X+Y \sim \Gamma(\alpha_1 + \alpha_2, \beta)$. \V
+Note that we can then conclude that, since each individual $X_i \sim \Gamma(1 , \frac{1}{\tau})$, we now have $\sum_{i=1}^n Xi \sim \Gamma(n, \frac{1}{\tau})$ \V
+In order to proceed, we must sidetrack and prove Lemma 2, that, if $X \sim \Gamma(\alpha, \beta)$, then $kX \sim \Gamma(\alpha, k\beta)$. \V
+Let $Y = kX$. Think of $Y$ as a transformation of $X$, $g(X)$. It is one to one and has inverse transformation $X = Y/k$. The Jacobian matrix is $\frac{dX}{dY} = \frac{1}{k}$ \V
+By first half of the class, we have:\\
+$f_Y(y) = f_X(g^{-1}(y)) \abs{\frac{dx}{dy}}$\V
+Using the pdf of $X$, a gamma distribution with parameters $\alpha, \beta$ as our basis, we have: \V
+$\displaystyle f_Y(y) = \frac{(y/k)^{\beta-1} e^{\frac{-y}{k\alpha}} }{\alpha^\beta \Gamma(\beta)}\abs{\frac{1}{k}}$ \V
+$\displaystyle f_Y(y) = \frac{y^{\beta-1} e^{\frac{-y}{k\alpha}}}{(k\alpha)^\beta \Gamma(\beta)}$ \V
+Hence, we can see that $Y = kX \sim \Gamma(\alpha, k\beta)$ and have shown Lemma 2. \V
+Therefore, the distribution of the mle $\hat{\tau} = \frac{\sum X_i}{n}$, which is the sum of $n$ $X_i's$ with distribution $\Gamma(1, \frac{1}{\tau})$ and scaled by $n$, must be $$\Gamma(n(1), \frac{1}{\tau}n) = \Gamma(n , \frac{n}{\tau})$$ \qed  \newpage
+\item[c.] Use the central limit theorem to find a normal approximation to the sampling distribution. \sol
+From d (actually below), we have $E[\hat{\tau}] = \tau$ and that Var$(\hat{\tau}) = \frac{\tau^2}{n}$. \V
+By Central Limit Theorem, we therefore have that: 
+$$\frac{\hat{\tau} - \tau}{\sqrt{\frac{\tau^2}{n}}} $$
+has the approximate distribution of $N(0,1)$ as $n \to \infty$.
+\item[d.] Show that the mle is unbiased, and find its exact variance. (Hint: The sum of the $X_i$ follows a gamma distribution.) \pro
+To show it is unbiased, we will need to find $E[\hat{\tau}]$ and show it is equivalent to $\tau$. \V
+$E[\hat{\tau}] = E[\bar{X}] = E\bigg(\frac{X_1 + ... + X_n}{n} \bigg)$ \V
+$E[\hat{\tau}] = \frac{1}{n} \bigg(E[X_1] + ... + E[X_n] \bigg)$ \V
+Since all $X_i$ are i.i.d., we have:\\
+$E[\hat{\tau}] = \frac{1}{n} \bigg(nE[X_i]\bigg)$ \V
+Because $X_i$ follows exponential distribution, $E[X_i] = \frac{1}{\lambda} = \tau$:\\
+$E[\hat{\tau}] = \frac{1}{n} (n\tau)$ \V
+$E[\hat{\tau}] = \tau$ \V
+Therefore, $Bias(\hat{\tau}) = E[\hat{\tau}] - \tau = \textbf{0}$. \V
+To find the variance, we need to calculate $E[\hat{\tau}^2] = E[\bar{X}^2]$. \V
+Var$(\bar{X}) = \text{Var}\bigg(\frac{1}{n}X_1 + ... + \frac{1}{n}X_n \bigg)$ \V
+By previous theorem, we have: \\
+Var$(\bar{X}) = \frac{1}{n^2}\text{Var}(X_1) + ... + \frac{1}{n^2}\text{Var}(X_n)$ \V
+Since $X_i$ are all i.i.d, we have same variance, $\frac{1}{\lambda^2} = \tau^2$ for each. So:\V
+ Var$\displaystyle (\bar{X}) = \frac{1}{n^2} n \text{Var}(X_i)= \frac{1}{n} \tau^2 = \frac{\tau^2}{n}$ \V \qed \newpage
+
+\item[e.] Is there any other unbiased estimate with smaller variance? \pro
+To see if there are any other unbiased estimators with smaller variance, we will see if this mle $\hat{\tau}$ has variance equivalent to the Cramer-Rao Lower Bound, equal to $\frac{1}{nI(\tau)}$. \V
+First, we must solve for $I(\tau)$. \\
+$I(\tau) = -E\bigg[\frac{\partial^2}{\partial \tau^2} \log\big(\frac{1}{\tau}e^{\frac{-X_i}{\tau}} \big) \bigg]$\V
+$I(\tau) = \frac{-1}{\tau^2} + E\Big(\frac{2X_i}{\tau^3} \Big)$ \V
+$I(\tau) = \frac{-1}{\tau^2} + \frac{2}{\tau^2} = \frac{1}{\tau^2}$ V
+Therefore, we have Cramer-Rao lower bound is $\frac{1}{n \frac{1}{\tau^2}} = \frac{\tau^2}{n}$. \V
+Since, by part d, we have Var$(\hat{\tau}) = \frac{\tau^2}{n} = \frac{1}{nI(\tau)}$, we know that this mle $\hat{\tau}$ has the least variance possible, and there are no other unbiased estimate with smaller variance. \qed
+
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} Rice 8.68\\
+Let $X_1,...,X_n$ be an i.i.d. sample from a Poisson distribution with mean $\lambda$ and conclude that $T=\sum_{i=1}^n X_i$
+\begin{enumerate}
+\item[a.] Show that the distribution of $X_1,...,X_n$ given $T$ is independent of $\lambda$, and conclude that $T$ is sufficient for $\lambda$. \pro
+Note that since $X_i$ are all distributed by Poisson, $T$ is Poisson distributed with mean $n\lambda$, and therefore, mean $n\lambda$, using results from previous homeworks. \V
+Each $X_i$ has pdf of $f(x \st \lambda) = \frac{1}{x!}\lambda^x e^{-\lambda}$.
+Allow $\textbf{X} = X_1,...,X_n$ and $\textbf{x} = x_1,...,x_n$. \V
+$\displaystyle P(\textbf{X} = \textbf{x} \st T = t) = \frac{P(\textbf{X} = \textbf{x}, T = t)}{P(T=t)}$ \V
+By definition of $T$ as sum of all $X_i$:\\
+$ = \displaystyle \frac{P(X_1 = x_1, X_2 = x_2,...,X_n = t-\sum_{i=1}^{n-1} x_i)}{P(T=t)}$ \V
+Which is conveniently: \\
+$ = \displaystyle \frac{ \displaystyle \Pi_{i=1}^{n-1}\Big(\frac{ \lambda^{x_i} e^{-\lambda}}{x_i!} \Big) \Big(\frac{\big(\lambda^{t- \sum_{i=1}^{n-1} x_i} e^{-\lambda} \big) }{\big(t - \sum_{i=1}^{n-1} x_i \big)!} \Big)}{\Big( \displaystyle \frac{(n\lambda)^t e^{-n\lambda}}{t!} \Big)}$ \V
+We can pull out term without $x_i$ in it from product and group like terms:\\
+$ = \displaystyle \frac{ \displaystyle  \lambda^{\sum_{i=1}^{n-1}x_i} e^{-(n-1)\lambda}\Pi_{i=1}^{n-1}\Big(\frac{1}{x_i!} \Big) \Big(\frac{\big(\lambda^{t- \sum_{i=1}^{n-1} x_i} e^{-\lambda} \big) }{\big(t - \sum_{i=1}^{n-1} x_i \big)!} \Big)}{\Big( \displaystyle \frac{(n\lambda)^t e^{-n\lambda}}{t!} \Big)}$ \V
+We combine like terms:\\
+$ = \displaystyle \frac{ \displaystyle  \lambda^{t} e^{-n\lambda}\Pi_{i=1}^{n-1}\Big(\frac{1}{x_i!} \Big) \Big(\frac{1 }{\big(t - \sum_{i=1}^{n-1} x_i \big)!} \Big)}{\Big( \displaystyle \frac{(n\lambda)^t e^{-n\lambda}}{t!} \Big)}$ \V
+We can reduce to get rid of $\lambda$ terms: \\
+$ = \displaystyle \frac{ \displaystyle   \Pi_{i=1}^{n-1}\Big(\frac{1}{x_i!} \Big) \Big(\frac{1 }{\big(t - \sum_{i=1}^{n-1} x_i \big)!} \Big)}{\Big( \displaystyle \frac{n^t}{t!} \Big)}$ \V
+Note that the above is the conditional distribution of $\textbf{X}$ given $T$ does not vary with $\lambda$, is not dependent on $\lambda$. \V
+ As such, we have shown that $T = \sum_{i=1}^n x_i$ is indeed a sufficient statistic by definition. \qed
+ 
+\item[b.] Show that $X_1$ is not sufficient. \pro
+We will use a similar procedure to show that $X_1$ is not a sufficient statistic. \V
+We again start with $P(\textbf{X} = \textbf{x} \st X_1 = x_1)$:\V
+$P(\textbf{X} = \textbf{x} \st X_1 = x_1) = \frac{P(\textbf{X} = \textbf{x}, X_1 = x_1)}{P(X_1 = x_1)}$\V
+Since $X_1 = x_1$ is included in our definition of $\textbf{X} = \textbf{x}$, we have:\V
+$P(\textbf{X} = \textbf{x} \st X_1 = x_1) = \frac{P(\textbf{X} = \textbf{x})}{P(X_1 = x_1)}$\V
+By definition: \V
+$P(\textbf{X} = \textbf{x} \st X_1 = x_1) = \frac{P(X_1 = x_1,...,X_n=x_n)}{P(X_1 = x_1)}$\V
+$P(\textbf{X} = \textbf{x} \st X_1 = x_1) = \displaystyle \frac{\displaystyle \Pi_{i=1}^n \displaystyle \frac{\lambda^{x_i} e^{-\lambda}}{x_i!} }{\displaystyle \frac{\lambda^{x_1} e^{-\lambda}}{x_1!}}$ \V
+$P(\textbf{X} = \textbf{x} \st X_1 = x_1) = \displaystyle \Pi_{i=2}^n \displaystyle \frac{\lambda^{x_i} e^{-\lambda}}{x_i!} $ \V
+Note that we cannot simplify this further to eliminate $\lambda$. As such, the distribution still depends on $\lambda$, and so we conclude that $X_1$ is not a sufficient statistic. \qed \newpage
+\item[c.] Use Theorem A of Section 8.8.1 to show that $T$ is sufficient. Identify functions $g$ and $h$ of that theorem. \pro
+Theorem A is the Factorization Theorem. The Factorization Theorem states that the statistic $T$ is sufficient iff the density function $f(x_1, ..., x_n \st \lambda)$ can be factored in the following way: $$f(x_1,...,x_n \st \lambda) = g(T(x_1,...,x_n), \lambda) h(x_1,...,x_n) $$
+We can use a few statements used as logical steps in part a here. \V
+We can write, since we know Poisson and $T = \sum_{i=1}^n X_i$:\V
+$f(x_1,...,x_n \st \lambda) = \Pi_{i=1}^n \frac{\lambda^{x_i} e^{-\lambda}}{x_i!}$ \V
+As before, we can separate like this: \V
+$f(x_1,...,x_n \st \lambda) = \bigg(\lambda^{\sum_{i=1}^n x_i} e^{-n\lambda} \bigg) \Pi_{i=1}^n \frac{1}{x_i!}$ \V
+Substituting our $T$:\V
+As before, we can separate like this: \V
+$f(x_1,...,x_n \st \lambda) = \bigg(\lambda^{T} e^{-n\lambda} \bigg) \Pi_{i=1}^n \frac{1}{x_i!}$ \V
+Which is of the desired form $f = g(T(x_1,...,x_n))h(x_1,...,x_n)$. \V
+Thus, $g(T) = \lambda^T e^{-n\lambda}$ and $h(x_1,...,x_n) = \displaystyle \Pi_{i=1}^n \frac{1}{x_i!}$. \qed
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise} Rice 8.70\\
+Use the factorization theorem to find a sufficient statistic for the exponential distribution. \pro
+The Factorization Theorem states that the statistic $T$ is sufficient iff the density function $f(x_1, ..., x_n \st \lambda)$ can be factored in the following way: $$f(x_1,...,x_n \st \lambda) = g(T(x_1,...,x_n), \lambda) h(x_1,...,x_n) $$
+We will start with the joint density function and then organize it in a way that matches the $f = g(T)h$ form, from which we can deduce a sufficient $T$. \V
+By i.i.d. $X_1,X_2,...,X_n$: \V
+$f(x_1,...,x_n \st \lambda) = f(x_1 \st \lambda)f(x_2 \st \lambda)...f(x_n \st \lambda)$ \V
+Next, we substitute in the pdf of an exponential variable with parameter $\lambda$ for each instance of $f$: \V
+$\displaystyle f(x_1,...,x_n \st \lambda) = \Pi_{i=1}^n \frac{1}{\lambda} e^{\frac{-x_i}{\lambda}}$ \V
+$\displaystyle f(x_1,...,x_n \st \lambda) = \frac{1}{\lambda} \Pi_{i=1}^n  e^{\frac{-x_i}{\lambda}}$ \V
+$\displaystyle f(x_1,...,x_n \st \lambda) = \frac{1}{\lambda^n}  e^{\frac{-1}{\lambda} \sum_{i=1}^n x_i}$ \V
+Let $T = \sum_{i=1}^n x_i$. Then let $g(T) = \frac{1}{\lambda^n} e^{-\frac{T}{\lambda}}$ and let $h(x_1,...,x_n) = 1$. \V
+See that we have shown that $f(x_1,...,x_n \st \lambda) = \frac{1}{\lambda^n} \Pi_{i=1}^n  e^{\frac{-1}{\lambda} \sum_{i=1}^n x_i} = g(T(x_1,...,x_n))h(x_1,...,x_n)$. \V
+By factorization theorem, this means we have found a sufficient statistic in $T = \sum_{i=1}^n x_i$. \qed 
+
+\end{exercise}
+
+\begin{exercise} Suppose we face a pattern recognition problem, where data consist of a single set of pixels $X$ (where there are 16 possible pixel patterns), and there are two possible patterns $\theta$, "0" and "6". The model is that $X$ has the probability function $p(x \st \theta)$ depending on $\theta$, given by the following table. Find the best test for "0" versus "6" for which the chance of making the error of "6" when the pattern is "0" is no greater than 0.10. What is the power of this test? \sol
+\begin{center}
+\begin{tabular}{ |c|c|c|c|} 
+ \hline
+ Pixel Num. & $\theta: 0$ & $\theta: 6$ & $\Lambda$ \\
+ \hline
+ 1 & 0 & 0 &  $\infty$ \\ 
+ 2 & 0 & .03 & 0 \\ 
+ 3 & .02 & .01 & 2 \\ 
+4 & .03 & .13 & .23 \\ 
+ 5 & .02 & .08 & .25 \\ 
+ 6 & .03 & .12 & 0.25 \\ 
+ 7 & .02 & 0 & $\infty$ \\ 
+ 8 & .02 & 0 & $\infty$ \\ 
+ 9 & .08 & .02 & 4 \\ 
+ 10 & .12 & .20 & 0.6 \\
+ 11 & .02 & .01 & 2 \\ 
+ 12 & .22 & .17 & 1.29 \\
+ 13 & .02 & .04 & 0.5 \\ 
+ 14 & .23 & .11 & 2.09 \\
+ 15 & 0 & .02 & 0 \\ 
+ 16 & .15 & .08 & 1.875 \\  
+ \hline
+\end{tabular}
+\end{center}
+\newpage
+
+Sorted by ascending $\Lambda$:
+\begin{center}
+\begin{tabular}{ |c|c|c|c|} 
+ \hline
+ Pixel Num. & $\theta: 0$ & $\theta: 6$ & $\Lambda$ \\
+ \hline
+ 2 & 0 & .03 & 0 \\ 
+ 15 & 0 & .02 & 0 \\ 
+ 4 & .03 & .13 & 0.23 \\ 
+ 5 & .02 & .08 & 0.25 \\ 
+ 6 & .03 & .12 & 0.25 \\
+ 13 & .02 & .04 & 0.5 \\
+ 10 & .12 & .20 & 0.6 \\
+ 12 & .22 & .17 & 1.29 \\
+ 16 & .15 & .08 & 1.875 \\  
+ 11 & .02 & .01 & 2 \\ 
+ 3 & .02 & .01 & 2 \\
+ 14 & .23 & .11 & 2.09 \\
+ 9 & .08 & .02 & 4 \\ 
+ 1 & 0 & 0 &  $\infty$ \\ 
+ 7 & .02 & 0 & $\infty$ \\ 
+ 8 & .02 & 0 & $\infty$ \\  
+ \hline
+\end{tabular}
+\end{center}
+
+Combine like $\Lambda$:
+\begin{center}
+\begin{tabular}{ |c|c|c|c|} 
+ \hline
+ $\theta: 0$ &  $\Lambda$ \\
+ \hline
+ 0 &  0 \\ 
+ .03 & 0.23 \\ 
+ .05 & 0.25 \\ 
+ .02 & 0.5 \\
+ .12 & 0.6 \\
+ .22 & 1.29 \\
+ .15 & 1.875 \\  
+ .04 & 2 \\ 
+ .23 & 2.09 \\
+ .08 & 4 \\  
+ .04 & $\infty$ \\  
+ \hline
+\end{tabular}
+\end{center}
+
+We are restricting our test by probability of error of 0.10. Note that by summing down our column of $\theta :0$ we can sum the first four rows before surpassing our limit of $0.10$. To be more accurate, the first four rows sum to exactly our limit. \V
+Because we sorted $\Lambda$ descending, we can go to the fourth row to see our limit for $\Lambda$ will be 0.25. Therefore, our test will be that if $\Lambda$ is less than $0.25$ then we reject the hypothesis that $\theta = 0$. \V
+To find the power of this test, we need to calculate $P( \Lambda < 0.25 \st \theta = 0)$. \V
+This is the same as the significance level for this test. The significance level is also effectively the type I error rate. By design, our test has type I error rate of $0.10$. \V
+Thus, we know we have $P( \Lambda < 0.25 \st \theta = 0) = 0.10$ \qed
+\end{exercise}
+\newpage
+\begin{exercise} Suppose $X$ has a $N(\mu, \sigma^2)$ distribution. 
+\begin{enumerate}
+\item[1.] Find the Most Powerful test for testing at level $\alpha = 0.05$ the hypothesis $H_0 : \mu = 6$ and $\sigma^2 = 4$ versus $H_1 : \mu = 9$ and $\sigma^2 = 4$. \sol
+Note that in either hypothesis, $\sigma^2 = 4$ which also implies $\sigma = 2$. \V
+So we really have $H_0: \mu = 6$ and $H_1: \mu = 9$. \V
+Using the pdf of a normal distribution, this gives us the following likelihood ratio: \V
+$\displaystyle \frac{L(x \st H_0)}{ L (x \st H_1)} = \frac{\frac{1}{2\sqrt{2\pi}} \exp(\frac{-(x-6)^2}{8})}{\frac{1}{2\sqrt{2\pi}} \exp(\frac{-(x-9)^2}{8})}$\V
+$\displaystyle \frac{L(x \st H_0)}{ L (x \st H_1)} = \frac{ \exp(\frac{-(x-6)^2}{8})}{ \exp(\frac{-(x-9)^2}{8})} = \exp \Big(\frac{-1}{8} (x-6)^2 + \frac{1}{8} (x-9)^2\Big)$\V
+$\displaystyle \frac{L(x \st H_0)}{ L (x \st H_1)} = \exp\Big(\frac{-x^2}{8} + \frac{12x}{8} - \frac{36}{8} + \frac{x^2}{8} - \frac{18x}{8} + \frac{81}{8}\Big) = \exp\Big(\frac{-6x}{8} + \frac{45}{8} \Big)$\V
+Hence we know that when:\\
+$$\exp\Big(\frac{-6x+45}{8}\Big) \geq K$$
+we side with $H_0$. \\
+This condition is equivalent to:\\
+$$x \leq \frac{45-8\ln(K)}{6} $$
+For confidence level $\alpha = 0.05$, we can use a normal z-table to solve for $K^* = \sigma z_{\frac{\alpha}{2}} + \mu_0 = 2 z_{\frac{\alpha}{2}} + 6 = 2(1.345) + 6 = 9.29$\V
+We can use this value of $K^*$ in to see that, when $x \leq 9.29$ we can safely side with $H_0$ over $H_1$ and when $x > 9.29$ we side with $H_1$ over $H_0$.   \qed \newpage
+\item[2.] Find the power of this test. \sol
+To find the power of this test, we would need to calculate $P(x > 9.29 \st \mu=9)$. \V
+Since we have normal distribution, this is the same as $P(z > \frac{9.29-9}{2}) = P(z > .145)$. \V
+From a $z$ table, we would have $P(z> 0.145) \approx 0.443$. \qed
+
+\item[3.] Suppose that instead of the above $H_1$, we have $H_1 : \mu = \mu_1$ and $\sigma^2 = 4$, where $\mu_1 > 6$. Find and graph the power function. \sol
+Following the logic of part 2, the power function would be $f(\mu_1) = P(x > 9.29 \st \mu = \mu_1)$. Note that the 9.29 is unchanged because it is calculated with $\mu$ of $H_0$. \V
+By normal distribution, we can rewrite power function as:\V
+$f(\mu_1) = P(z > \frac{9.29-\mu_1}{2})$\V
+Which rudimentarily looks as follows: \\ \vspace{5cm} \\ \qed
+\end{enumerate}
+\end{exercise}
+
+
+
+\end{document}
