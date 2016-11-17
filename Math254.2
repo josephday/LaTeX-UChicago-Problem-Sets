@@ -1,0 +1,319 @@
+\documentclass[12pt]{article}
+
+%----------Packages----------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mdwlist}
+%\usepackage{amsrefs}
+\usepackage{dsfont}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage[all]{xy}
+\usepackage[mathcal]{eucal}
+\usepackage{verbatim}  %%includes comment environment
+\usepackage{fullpage}  %%smaller margins
+\usepackage{hyperref}
+%----------Commands----------
+
+%%penalizes orphans
+\clubpenalty=9999
+\widowpenalty=9999
+
+%% bold math capitals
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+
+%% blackboard bold math capitals
+\newcommand{\bbA}{\mathbb{A}}
+\newcommand{\bbB}{\mathbb{B}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbD}{\mathbb{D}}
+\newcommand{\bbE}{\mathbb{E}}
+\newcommand{\bbF}{\mathbb{F}}
+\newcommand{\bbG}{\mathbb{G}}
+\newcommand{\bbH}{\mathbb{H}}
+\newcommand{\bbI}{\mathbb{I}}
+\newcommand{\bbJ}{\mathbb{J}}
+\newcommand{\bbK}{\mathbb{K}}
+\newcommand{\bbL}{\mathbb{L}}
+\newcommand{\bbM}{\mathbb{M}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbO}{\mathbb{O}}
+\newcommand{\bbP}{\mathbb{P}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbS}{\mathbb{S}}
+\newcommand{\bbT}{\mathbb{T}}
+\newcommand{\bbU}{\mathbb{U}}
+\newcommand{\bbV}{\mathbb{V}}
+\newcommand{\bbW}{\mathbb{W}}
+\newcommand{\bbX}{\mathbb{X}}
+\newcommand{\bbY}{\mathbb{Y}}
+\newcommand{\bbZ}{\mathbb{Z}}
+
+%% script math capitals
+\newcommand{\sA}{\mathscr{A}}
+\newcommand{\sB}{\mathscr{B}}
+\newcommand{\sC}{\mathscr{C}}
+\newcommand{\sD}{\mathscr{D}}
+\newcommand{\sE}{\mathscr{E}}
+\newcommand{\sF}{\mathscr{F}}
+\newcommand{\sG}{\mathscr{G}}
+\newcommand{\sH}{\mathscr{H}}
+\newcommand{\sI}{\mathscr{I}}
+\newcommand{\sJ}{\mathscr{J}}
+\newcommand{\sK}{\mathscr{K}}
+\newcommand{\sL}{\mathscr{L}}
+\newcommand{\sM}{\mathscr{M}}
+\newcommand{\sN}{\mathscr{N}}
+\newcommand{\sO}{\mathscr{O}}
+\newcommand{\sP}{\mathscr{P}}
+\newcommand{\sQ}{\mathscr{Q}}
+\newcommand{\sR}{\mathscr{R}}
+\newcommand{\sS}{\mathscr{S}}
+\newcommand{\sT}{\mathscr{T}}
+\newcommand{\sU}{\mathscr{U}}
+\newcommand{\sV}{\mathscr{V}}
+\newcommand{\sW}{\mathscr{W}}
+\newcommand{\sX}{\mathscr{X}}
+\newcommand{\sY}{\mathscr{Y}}
+\newcommand{\sZ}{\mathscr{Z}}
+
+\renewcommand{\phi}{\varphi}
+%\renewcommand{\emptyset}{\O}
+
+\providecommand{\abs}[1]{\lvert #1 \rvert}
+\providecommand{\norm}[1]{\lVert #1 \rVert}
+\providecommand{\x}{\times}
+\providecommand{\ar}{\rightarrow}
+\providecommand{\arr}{\longrightarrow}
+
+
+%----------Theorems----------
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem*{defi}{Definition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{nondefinition}[theorem]{Non-Definition}
+\newtheorem{exercise}[theorem]{Exercise}
+
+%---------------------------
+\newcommand{\set}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\st}{\ |\ }
+\newcommand{\Hskip}{\vspace{0.7in}}
+\newcommand{\vx}{\bf x}
+\newcommand{\vy}{\bf y}
+
+\newcommand{\V}{\vspace{0.3cm}\\}
+\newcommand{\pro}{\V \textbf{Proof:} \V}
+%------BEGIN DOC--------
+
+\begin{document}
+
+\begin{flushright}
+Joe Day\\
+Math 254\\
+10/12/16
+\end{flushright}
+\begin{center}
+\underline{PROBLEM SET 2 : BASIC ALGEBRA 1}
+\end{center}
+
+\begin{exercise} Exercises 1,3,5,6 from Section 4
+\begin{enumerate}
+\item[1.] $\big(\Z, a * b = ab \big)$ \V
+This operation is effectively multiplication. The identity element of this group $e =1$. We can verify this, as $a*1 =a$. Since $1 \in \Z$, the identity property holds. \V
+Assume $a \in \Z$. We will find $b$ such that $a*b=e=1$.\\ 
+$a*b=1$ $\implies$ $b = \frac{1}{a}$\\
+As such, $\exists a \in \Z$ such that $a^{-1} = b \not \in \Z$. For example, $a=2$.  Invertabillity property does not hold, and \textbf{this is not a group}. \qed
+\item[3.] $\big(\R^+, a * b = \sqrt{ab} \big)$ \V
+We will find the identity element of this group. This is $e$ such that $\forall a \in \R^+, a*e=a$. \\
+$a*e=\sqrt{ae}=a \implies e = a$\V
+Since $e=a$ varies with $a$, it is not unique on the set $\R^+$. Identity property does not hold, and \textbf{this is not a group.} \qed
+
+\item[5.] $\big(\R^*, a * b = \displaystyle \frac{a}{b} \big)$ \V
+We will find the identity element of this group, $e$ such that $\forall a \in \R^*, a*e=a$. \\
+$a * e = \frac{a}{e} = a \implies e = 1 \in R^*$ so the identity property holds. \V
+Assume $a \in \R^*$. We will find $b$ such that $a * b = e = 1$. \\
+$a*b=\frac{a}{b} = 1 \implies b = a$\\
+As such, $\forall a \in R^*, \exists b = a^{-1} = a \in \R^*$. Invertability property holds for the set $R^*$. \V
+Next we will check for associativity of $*$. To do so, we solve for $(a*b)*c$ and $a*(b*c)$. \V
+$(a*b)*c = \displaystyle \frac{a}{b} * c = \frac{\frac{a}{b}}{c} = \frac{a}{bc}$ \V
+$a*(b*c) = \displaystyle a* \frac{b}{c} = \frac{a}{\frac{b}{c}} = \frac{ac}{b}$\V
+$\frac{a}{bc} \neq = \frac{ac}{b} \implies (a*b)*c \neq a*(b*c)$ \V
+Hence, associativity of * does not hold, and \textbf{this is not a group}.  \qed \newpage
+\item[6.] $\big(\mathbb{C}, a * b = \abs{ab}\big)$\V
+First we will look for identity element $e$ of the set, such that $\forall a \in \mathbb{C}, a*e=a$\\
+$a*e = \abs{ae} = \abs{\big(\Re(a)\Re(e) - \Im(a)\Im(e)\big)+i\big(\Re(a)\Im(e) - \Re(e)\Im(a)\big)}$\V
+$\hspace*{0.9cm} = \sqrt{\big(\Re(a)\Re(e) - \Im(a)\Im(e)\big)^2 + \big(\Re(a)\Im(e) - \Re(e)\Im(a)\big)^2}$ \V
+Note that this value is the square root of the sum of two necessarily positive values (squares of compositions of real numbers). Hence, $\abs{ae} \in \R^+$. \V
+Let $a \in \mathbb{C}$ and $\Im(a) \neq 0$. Then, no matter what value we propose for $e$, for this $a$, we have $\abs{ae} \not \in \mathbb{C}$ but $a \in \mathbb{C}$ with imaginary component. \V
+Therefore, $\exists a\in \mathbb{C}$ such that $\nexists e \in \mathbb{C}$ such that $\abs{ae} = a$. So, the identity property is not satisfied, and \textbf{this is not a group.} \qed
+\end{enumerate}
+
+\end{exercise}
+
+\begin{exercise} Prove that for every $n\in\Z^+, (\Z/n\Z, +)$ is a group.
+\pro $\forall n \in \Z^+, \Z/n\Z = \{[0], [1],...,[n-1]\}$ \V
+We will show that for this set closure holds. \\
+Let $[a],[b] \in \Z/n\Z$.\\
+Note that $[a]*[b]=[a*b]$ so $[a] + [b] = [a+b]$.\\
+Because $a,b \in \Z^+$, we know $a+b \in \Z^+$. 
+So, $\exists j,k \in \Z, k<n$ such that $a + b = jn +k$.\\
+Hence, $[a+b] = [k] \in \Z/n\Z$.  
+So closure holds. \V
+We will show the set has an identity element. \\
+Since $[a] + [e] = [a+e]$, we are looking for $e$ such that $a = a+e$.  For addition, this $e=0$. \\
+Then $[a] + [0] = [a+0] = [a]$ and identity holds. \V
+Now we will show the set has invertability property.\\
+We want $[b]$ such that $\forall [a] \in \Z/n\Z, [a]*[b] = [e] = [0]$. \\
+$\forall [a]$, let $b = n-a$. Then we have:\\
+$[a] + [b] = [a] + [n-a] = [n] = [0] = [e]$ and so the invertability property holds. \V
+Finally, we check to see if associativity holds.\\
+We will evaluate $([a]*[b])*[c]$ and $[a]*([b]*[c]) $ and compare solutions. \\
+$([a]*[b])*[c] = ([a+b])+[c] = [a+b+c]$\\
+$[a]*([b]*[c]) = [a] + ([b+c]) = [a+b+c]$\\
+Since $[a]*([b]*[c]) = ([a]*[b])*[c]$, we know associativity holds. \V
+Hence, $(\Z/n\Z, +)$ satisfies all conditions and is a group. \qed
+
+\end{exercise}
+\newpage
+\begin{exercise} Let $p \in \Z^+.$ Prove that $\big((\Z/p\Z)^*, \x \big)$ is a group if and only if $p$ is a prime number. 
+\pro First, we will show that $p$ is a prime $\implies$ $\big((\Z/p\Z)^*, \x \big)$ is a group. \\
+To do so, we will need to show properties closure, associativity, identity, and invertability. 
+\begin{enumerate}
+\item [a.] \textit{Identity} \\
+For the operation $\x$, multiplication, the identity element $e = [1]$. We can quickly verify this by seeing that $[a][1] = [a \x 1] = [a]$. \V
+$[1]$ is in $(\Z/p\Z)^*$ because $[1] \neq [0]$ and $1 \in [1, p-1]$, assuming $p \geq 2$. We can safely assume this because 1 is not prime and we have built on the assumption that $p$ is prime.  
+\item[b. ] \textit{Invertability} \\
+Assume $[a] \in (\Z/p\Z)^*$. We will find inverse of $[a]$. \V
+Note that $1$ is the identity value $e$ for this group.\\
+This means we want $[b]$ such that $[a][b] = 1$.\\
+Which is the same as $[b]$ such that $[ab] = 1$.\\
+Which is the same as $ab \equiv 1 \mod{p}$.\\
+Which is the same as $p | (ab-1)$, or $p$ divides $(ab-1)$. \\
+Which would imply that $\exists k\in \Z$ such that $pk = ab-1$, or that $1 = ab - pk$.\V
+Because we know that $p$ is prime and $a<p$ we know that $a,p$ are coprime integers. Hence, by Bezout's law, we know that there exists integer values for $b$ and $k$ such that $1 = ab - pk$ is true. Working recursively, we know that this means there exists $[b]$ such that $[a][b] = 1$, and so we know $(\Z/p\Z)^*$ has inverse. 
+\item[c.] \textit{Associativity} \\ 
+To check for associativity is simple. We assume that $[a],[b],[c] \in (\Z/p\Z)^*$. \\
+We will try to evaluate $([a]*[b])*[c]$ and $[a]*([b]*[c])$ for this supposed group's operation, multiplication. If the group has associativity, then the two values will be equivalent. \V
+$([a]\x[b])\x[c] = ([ab])\x[c] = [ab]\x[c] = [abc]$.\V
+$[a]\x([b]\x[c]) = [a] \x ([bc]) = [a] \x [bc] = [abc].$ \V
+Hence, $([a]\x[b])\x[c] = [a]\x([b]\x[c])$ and associative property holds. 
+\item[d.] \textit{Closure} \\
+We want to show that $(\Z/p\Z)^* \x (\Z/p\Z)^* \rightarrow (\Z/p\Z)^*$ \\ or equivalently that $\forall [a],[b] \in (\Z/p\Z)^*, [a]\x[b] \in (\Z/p\Z)^*$. \V
+By definition of quality of number being prime, $p$ is prime if $\forall a,b < p$, $ab \neq p$. \\
+In other words, no two integers less than $p$ multiply to $p$. \V
+In order for $[a],[b]$ to be in $(\Z/p\Z)^*$, $a,b < p$.\\
+Since $p$ is prime, we know that $ab \neq p$. We also know that $a \neq p, b\neq p$ so we know that $ab$ is not a multiple of $p$, i.e. $\nexists k$ such that $kp = ab$. \V
+Instead, we know that $ab = kp + n$, for some integer $k,n$. \\
+By definition then, $ab \equiv n \mod p$, where $n \neq 0$.\\ As such, $[ab] \neq [0]$.  And so, we know $\forall [a],[b] \in (\Z/p\Z)^*, [ab] \in (\Z/p\Z)^*$ 
+\end{enumerate} 
+Hence, we have shown that, if $p$ prime, then $\big((\Z/p\Z)^*, \x\big)$ satisfies all necessary conditions to be a group. \V
+Now, we will show that $\big((\Z/p\Z)^*, \x\big)$ is a group $\implies$ $p$ is prime. We will do so via contraposition. \V
+So, we will show that $p$ not prime $\implies$ $\big((\Z/p\Z)^*, \x\big)$ not a group. \V 
+If $p$ is not prime, then $\exists a,b < p$ such that $ab =p$.\\
+As such, $\exists [a],[b] \in (\Z/p\Z)^*$ such that $[ab] = [p]= [0]$. \\
+Hence, $[a] \x [b] = [ab] \not \in (\Z/p\Z)^*$ and $(\Z/p\Z)^*$ is not closed for the operation. \\
+As such, $p$ not prime $\implies$ $(\Z/p\Z)^*$ not a group.\\
+Therefore, $(\Z/p\Z)^*$ is a group $\implies$ $p$ is prime.\V
+We have shown both $\implies$ and $\impliedby$ and so $\iff$ holds. \qed  
+
+\end{exercise}
+
+\begin{exercise} Exercise 7 from Section 4.\\
+Give an example of an abelian group $G$ where $G$ has exactly 1000 elements. 
+\pro
+Consider $G = (\Z/1000\Z, +)$. This group is cyclic and has elements $\{[0],[1],...,[n-1]\}$ where $n=1000$, for a total of 1000 elements. \V
+We know $G$ is a group because it is of form $(\Z/n\Z, +)$. We must verify $G$ is abelian.\\
+To do so, we must see if $\forall x,y \in G$ we have $x*y = y*x$. \\
+Let $[x], [y] \in G$. $[x]+[y] = [x+y]$ by prior proposition on operating over equivalence classes, in particular for congruence modulo.\\
+By same logic, $[y] +[x] = [y+x]$. \\
+Since we know that $x,y \in \Z$, we have $x+y = y+x$. Hence, $[x+y] = [y+x]$ and so $[x]+[y] = [y]+[x]$, $\forall [x],[y] \in G$.\\
+Therefore, $G$ is abelian with exactly 1000 elements. \qed   
+\newpage 
+
+\end{exercise}
+
+\begin{exercise} Exercises 1-4 from Section 5.\\
+Determine whether the given subset of the complex numbers is a subgroup of the group $\mathbb{C}$ under addition.\V
+NOTE: for each of the following, to determine whether or not subset $H$ is a subgroup of $G$, we will look for the following three properties. \V
+a. $e_G \in H$. For $G = (\mathbb{C}, +)$, $e_G = 0$\\
+b. $\forall x,y \in H$, $x+y \in H$\\
+c. $\forall x \in H$, $x^{-1} \in H$
+\begin{enumerate}
+\item[1.] $\R$ \pro
+a. $e_G = 0 \in \R$. \checkmark \\
+b. $\forall x,y \in \R$, we know that $x+y \in \R$. \checkmark \\ 
+c. $\forall x \in \R$, we know that $x^{-1} + x = 0$. So, $x^{-1} = -x \in \R$. \checkmark \V
+Since all three hold, $(\R,+)$ is a subgroup of $(\mathbb{C}, +)$. \qed
+
+\item[2.] $\Q^+$ \pro
+a. $e_G = 0 \not\in \Q^+$. $\text{\sffamily X}$\V
+Since $a$ does not hold, we already know $(\Q^+, +)$ is not a subgroup of $(\mathbb{C}, +)$. \qed
+\item[3.] $7\Z$ \pro
+a. $e_G = 0 = 7 \x 0 \in 7\Z$. \checkmark \\
+b. $\forall x,y \in 7\Z$, we know that $\exists k,j \in \Z$ such that $x= 7k, y=7j$.\\ So $x+y = 7k + 7j = 7(k+j) \in 7\Z$. \checkmark \\ 
+c. $\forall x \in 7\Z$, we know $x^{-1} + x = 0 \implies x^{-1} = -x$. So, if $x = 7k$, $x^{-1} = -7k \in 7\Z$.  \checkmark \V
+Since all three hold, $(7\Z,+)$ is a subgroup of $(\mathbb{C}, +)$. \qed
+\item[4.] $i\R \cup \{0\}$ \pro
+a. $e_G = 0 = 0i \in i\R$ \checkmark \\
+b. $\forall x,y \in i\R$, we know that $\exists k,j\in \R$ such that $x=ik, y=ij$. \\ So $x+y = ik + ij = i(k+j) \in i\R$. \checkmark \\ 
+c. $\forall x \in i\R$, we know $x^{-1} + x = 0 \implies x^{-1} = -x$. So, if $x = ik$, $x^{-1} = -ik \in i\R$.  \checkmark \V
+Since all three hold, $(i\R,+)$ is a subgroup of $(\mathbb{C}, +)$. \qed
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise} Let $G$ be a group such that for every $x \in G, x^2 = e$. Prove that $G$ is abelian.\pro
+Since $x*x = e$, we know that $\forall x \in G, x=x^{-1}$. \V
+Let $a,b \in G$. Then $ab \in G$ by closure property of groups. \\
+By above, $ab = (ab)^{-1}$.\V
+We will now detour to show that $(xy)^{-1} = y^{-1}x^{-1}$.\\
+Take $x,y \in G$. Note that by definition, $xx^{-1} = yy^{-1} = e$. \\
+We examine $x*y*y^{-1}*x^{-1}$. By associativity:\\ $x*y*y^{-1}*x^{-1} = (x*y)*(y^{-1}*x^{-1}) =  x*(y*y^{-1})*x^{-1}$\\
+$x*y*y^{-1}*x^{-1} = (xy)*(y^{-1}x^{-1}) = x*(e)*x^{-1} = xx^{-1} = e$\\
+Since $(xy)*(y^{-1}x^{-1})=e$ we know that $(xy)^-1 = y^{-1}x^{-1}$. \V
+We use this with the above fact that $ab = (ab)^{-1}$.\\
+So we know that $(ab)^{-1} = b^{-1}a^{-1}$. \\
+So $ab = b^{-1}a^{-1}$.\\
+Since we know $a = a^{-1}, b=b^{-1}$, we have that $ab = ba$. \\
+So $G$ is abelian. \qed
+
+\end{exercise}
+
+
+\end{document}
